@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+body{
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("/LoveLife/img/bg.jpg");
+	height:100%;
+	width:100%;
+	position:cover;
+}

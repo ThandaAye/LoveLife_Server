@@ -1,0 +1,37 @@
+DROP SCHEMA LoveLife;
+CREATE SCHEMA `LoveLife` DEFAULT CHARACTER SET utf8 ;
+
+Use LoveLife;
+
+CREATE TABLE IF NOT EXISTS User(
+userID int AUTO_INCREMENT,
+username nvarchar(50),
+password nvarchar(200),
+fullname nvarchar(50),
+nickname nvarchar(50),
+dob nvarchar(10),
+contactno nvarchar(20),
+email nvarchar(100),
+imgUrl nvarchar(200),
+CONSTRAINT pk_userID PRIMARY KEY (userID)
+);
+
+CREATE TABLE IF NOT EXISTS Relationship(
+relationshipID int auto_increment,
+startDate nvarchar(10),
+firstPerson int,
+secondPerson int,
+CONSTRAINT pk_relationshipID PRIMARY KEY (relationshipID),
+CONSTRAINT fk_firstPerson FOREIGN KEY (firstPerson) REFERENCES User (userID),
+CONSTRAINT fk_secondPerson FOREIGN KEY (secondPerson) REFERENCES User (userID)
+);
+
+CREATE TABLE IF NOT EXISTS Temp(
+tempID int auto_increment,
+userID int,
+tempData nvarchar(200),
+dateAdded nvarchar(10),
+available boolean,
+CONSTRAINT pk_tempID PRIMARY KEY (tempID),
+CONSTRAINT fk_userID FOREIGN KEY (userID) REFERENCES User(userID)
+);
