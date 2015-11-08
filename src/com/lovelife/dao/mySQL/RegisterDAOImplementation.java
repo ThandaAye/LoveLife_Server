@@ -46,6 +46,7 @@ public class RegisterDAOImplementation implements RegisterDAO{
 			finally{
 				try {
 					conn.close();
+					Sys.log(Constant.DB_CLOSE);
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}

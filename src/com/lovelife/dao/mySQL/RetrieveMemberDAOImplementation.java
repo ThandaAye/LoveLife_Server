@@ -52,6 +52,7 @@ public class RetrieveMemberDAOImplementation implements RetrieveMemberDAO {
 			try {
 				result.close();
 				conn.close();
+				Sys.log(Constant.DB_CLOSE);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -94,6 +95,7 @@ public class RetrieveMemberDAOImplementation implements RetrieveMemberDAO {
 			try {
 				result.close();
 				conn.close();
+				Sys.log(Constant.DB_CLOSE);
 			} catch (SQLException e) {
 				Sys.logError(Constant.RETRIEVED_ERROR);
 				e.printStackTrace();
@@ -135,6 +137,7 @@ public class RetrieveMemberDAOImplementation implements RetrieveMemberDAO {
 			try {
 				resultSet.close();
 				conn.close();
+				Sys.log(Constant.DB_CLOSE);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

@@ -49,6 +49,7 @@ public class LoginDAOImplementation implements LoginDAO {
 		finally{
 			try {
 				conn.close();
+				Sys.log(Constant.DB_CLOSE);
 			}catch (SQLException e) {
 				e.printStackTrace();
 			}
