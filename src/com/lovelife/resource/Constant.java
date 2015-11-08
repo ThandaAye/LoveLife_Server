@@ -12,6 +12,7 @@ public class Constant {
 	public static final String J_IMG = "imgUrl";
 	public static final String DB_CONNECTING = "Connecting to Database...";
 	public static final String DB_CONNECTED = "Connection to Database";
+	public static final String DB_CLOSE = "Connection to Database is closed...";
 	public static final String DB_ERROR = "Connection to Database Failed";
 	public static final String AUTHENTICATED = "Authenication";
 	public static final String AUTHENTICATING_MEMBER = "Authenticating member...";
