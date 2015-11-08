@@ -52,12 +52,12 @@ public class RetrieveMemberDAOImplementation implements RetrieveMemberDAO {
 			try {
 				result.close();
 				conn.close();
+				Sys.logSuccess(Constant.RETRIEVED_ALL_MEMBERS);
 				Sys.log(Constant.DB_CLOSE);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
-		Sys.logSuccess(Constant.RETRIEVED_ALL_MEMBERS);
 		return membersList;
 	}
 
